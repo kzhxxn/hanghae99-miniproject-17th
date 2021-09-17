@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>where we go</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/common.css') }}"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8246ad551c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+  </head>
+  <body>
+    <header class="hd clear">
+      <div class="hd__inner">
+        <h1 class="hd__logo">
+          <a href="">where we go</a>
+        </h1>
+        <button class="btn__login"><i class="far fa-user-circle"></i></button>
+      </div>
+    </header>
+
+    <div class="banner__wrap">
+      <ul class="banner clear">
+        <li class="banner__list1"></li>
+        <li class="banner__list2"></li>
+        <li class="banner__list3"></li>
+        <li class="banner__list4"></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <form class="sort_wrap">
+        <label for="sort_loc" class="blind">지역별</label>
+        <select
+          name="locations"
+          id="sort_loc"
+          class="sorts"
+          title="검색할 지역을 선택하세요."
+        >
+          <option value="">전체/도</option>
+          <option value="서울">서울시</option>
+          <option value="부산">부산시</option>
+          <option value="대구">대구시</option>
+          <option value="인천">인천시</option>
+          <option value="광주">광주시</option>
+          <option value="대전">대전시</option>
+          <option value="울산">울산시</option>
+          <option value="세상">세종시</option>
+          <option value="경기">경기도</option>
+          <option value="강원">강원도</option>
+          <option value="충청북">충청북도</option>
+          <option value="충청남">충청남도</option>
+          <option value="전라북">전라북도</option>
+          <option value="전라남">전라남도</option>
+          <option value="경상남">경상북도</option>
+          <option value="경상남">경상남도</option>
+          <option value="제주">제주도</option>
+        </select>
+        <label for="sort_theme" class="blind">테마별</label>
+        <select
+          name="themes"
+          id="sort_theme"
+          class="sorts"
+          title="검색할 테마을 선택하세요."
+        >
+          <option value="">테마</option>
+          <option value="바다">#바다가보이는</option>
+          <option value="수영장">#수영장있는</option>
+          <option value="둘레길">#둘레길</option>
+        </select>
+        <label for="sort_view"></label>
+        <input type="button" id="sort_view" class="sorts" value="조회수" />
+      </form>
+      <section class="camping__wrap">
+        <ul class="camping clear"></ul>
+        <div class="paging__wrap">
+          <!-- <ul class="paging clear">
+            <li class="paging__list"><i class="fas fa-chevron-left"></i></li>
+            <li class="paging__list">
+              <button class="paging__button on">1</button>
+            </li>
+            <li class="paging__list">
+              <button class="paging__button">2</button>
+            </li>
+            <li class="paging__list">
+              <button class="paging__button">3</button>
+            </li>
+            <li class="paging__list">
+              <button class="paging__button">4</button>
+            </li>
+            <li class="paging__list">
+              <button class="paging__button">5</button>
+            </li>
+            <li class="paging__list"><i class="fas fa-chevron-right"></i></li>
+          </ul> -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

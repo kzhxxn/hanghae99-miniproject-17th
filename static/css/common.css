@@ -1,0 +1,315 @@
+body {
+  font-size: 14px;
+  font-family: 'Noto Serif KR', serif;
+}
+body.stop__scroll {
+  overflow-y: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  position: absolute;
+  left: -9999em;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.hd {
+  padding: 30px 0;
+}
+.hd__inner {
+  width: 80%;
+  margin: auto;
+}
+.hd__logo {
+  margin-top: 3px;
+  float: left;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+.welcome {
+  position:absolute;
+  right:10px;
+  top:10px;
+}
+.btn__logout {
+  border: none;
+  padding: 0;
+  float: right;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333333;
+}
+
+.banner__wrap {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+.banner {
+  width: 400%;
+}
+.banner > li {
+  float: left;
+  width: 25%;
+  height: 800px;
+}
+.banner > li.on {
+  animation: 3s ease-in slide;
+}
+.banner__list1 {
+  background: url('../images/camping.jpeg') no-repeat center 80%;
+  background-size: cover;
+}
+.banner__list2 {
+  background: url('../images/camping2.jpeg') no-repeat center 80%;
+  background-size: cover;
+}
+.banner__list3 {
+  background: url('../images/camping3.jpeg') no-repeat center 80%;
+  background-size: cover;
+}
+.banner__list4 {
+  background: url('../images/camping.jpeg') no-repeat center 80%;
+  background-size: cover;
+}
+
+
+.sort_wrap {
+  margin: 80px 0 40px 0;
+  padding: 20px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #48646f80;
+}
+.sorts:first-child {
+  margin-left: 0;
+}
+.sorts {
+  width: 150px;
+  margin-left: 40px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+#sort_loc,
+#sort_theme {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url('../images/arrow_down.png') no-repeat 90% 50%/15px auto;
+  background-size: 10px auto;
+}
+#sort_view {
+  background-color: #fff;
+}
+
+.camping__list {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-bottom:30px;
+  float: left;
+  background: #f7f7f7;
+}
+.camping__list:last-child {
+  margin-right: 0;
+}
+.camping__list > img {
+  width:40%;
+  height: 200px;
+}
+.camping__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:60%;
+  padding-left:10px;
+  box-sizing: border-box;
+}
+.camping__desc + div {
+  margin-bottom:10px;
+}
+.camping__tag {
+  font-size:13px;
+  margin:10px 0;
+  color:#333;
+}
+.camping__tag {
+  color: #658C9C;
+}
+.camping__name {
+  margin:0 0 20px 0;
+  font-size:20px;
+  font-weight:bold;
+}
+.camping__link {
+  padding: 3px 5px;
+  background-color: salmon;
+}
+.camping__review {
+  border: none;
+  padding: 3px 5px;
+  line-height: 25px;
+  cursor: pointer;
+  background-color: bisque;
+}
+.article__bg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #00000080;
+}
+.article__bg.on {
+  display: block;
+}
+.review__popUp {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  height: 70%;
+  margin: -35% 0 0 -35%;
+  padding: 20px;
+  z-index: 2;
+  background-color: #fff;
+  box-sizing: border-box;
+  /* overflow-y: auto; */
+}
+.btn__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+.btn__close > i {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+.review__tb {
+  width: 100%;
+}
+.review__tb > thead {
+  background-color: #eee;
+}
+.review__tb tr {
+  border-bottom: 1px solid #eee;
+}
+.review__tb th,
+.review__tb td {
+  padding: 10px 0;
+  text-align: center;
+}
+.review__author {
+  width: 15%;
+}
+.review__comment {
+  width: 60%;
+}
+.review__star {
+  width: 15%;
+}
+.review__question {
+  margin: 5px 0 10px 0;
+  padding: 10px 0 10px 40px;
+  background: transparent url(../images/footprints.png) no-repeat left center;
+  background-size: 30px auto;
+}
+.ft__review {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+.form__desc {
+  margin: 0;
+  padding: 10px 5px;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+.star {
+  border: none;
+  width: 25px;
+  height: 25px;
+  line-height: 15px;
+  padding: 0;
+  font-size: 20px;
+  background-color: transparent;
+  color: #eee;
+  cursor: pointer;
+}
+.star.on {
+  color: #faf302;
+}
+.star > i {
+  vertical-align: bottom;
+}
+
+#write {
+  width: 100%;
+}
+
+.paging {
+  margin: 80px 0 40px 0;
+  text-align: center;
+}
+.paging > li:first-child {
+  margin-left: 0;
+}
+.paging > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.paging__button {
+  border: none;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+.paging__button.on {
+  position: relative;
+  font-weight: bold;
+  color: hsl(35, 70%, 53%);
+}
